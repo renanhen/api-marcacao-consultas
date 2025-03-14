@@ -1,8 +1,10 @@
 package com.fiap.ecr.api_marcacao_consultas.config;
 
 import com.fiap.ecr.api_marcacao_consultas.security.JwtAuthenticationFilter;
+import com.fiap.ecr.api_marcacao_consultas.security.JwtTokenProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
@@ -27,6 +29,7 @@ public class SecurityConfig {
                                 "/usuarios/login",
                                 "/h2-console/**" // PERMITE ACESSO AO H2
                         ).permitAll()
+                        .requestMatchers(HttpMethod.POST, "/consultas").authenticated()
                         .anyRequest().authenticated()
                 )
                 .headers(headers -> headers
