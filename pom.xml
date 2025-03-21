@@ -12,7 +12,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.fiap.ecr</groupId>
+	<groupId>com.fiap.eca</groupId>
 	<artifactId>api_marcacao_consultas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>api_marcacao_consultas</name>

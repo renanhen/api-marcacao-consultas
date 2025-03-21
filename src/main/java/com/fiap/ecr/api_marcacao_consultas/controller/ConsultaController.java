@@ -3,7 +3,7 @@ import com.fiap.ecr.api_marcacao_consultas.model.Consulta;
 import com.fiap.ecr.api_marcacao_consultas.service.ConsultaService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
+
 import java.util.Optional;
 @RestController
 @RequestMapping("/consultas")
